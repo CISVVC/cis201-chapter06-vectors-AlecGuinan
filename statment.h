@@ -12,7 +12,7 @@ class Statment
 	
 	int averagei();
 
-	int total();
+	void print();
 
 	private:
 

@@ -15,7 +15,7 @@ void Statment::addtransaction()
 	int day;
 	std::cout << "Please enter the day: " << std::endl; 
 	std::cin >> day;
-	std::cout << "Please enter transaction amount: $" << std::endl;
+	std::cout << "Please enter transaction amount with no decimal: $" << std::endl;
 	std::cin >> amount;
 	std::cout << "Please enter transaction type: " << std::endl;
 	std::cin >> comment; 
@@ -25,9 +25,28 @@ void Statment::addtransaction()
 	
 }
 
-int averagei()
+int Statment::averagei()
 {
-	for (int i = 0: i < m_transaction.size(); i++)
+	int days = 0; 
+	for( int i = 0; i < m_transaction.size(); i++)
 	{
-		
-
+		if(days >= 30)
+		{
+			m_balance = m_balance + (m_balance / 30);
+			days = days - 30;
+		}
+			days ++;
+	}
+}
+void Statment::print()
+{
+	for( int i = 0; i < m_transaction.size(); i++)
+	{
+		Transaction b;
+		b = m_transactions[i];
+		std::cout << "The day is " << b.m_day() << " ";
+		std::cout << "The transaction amount is " << b.m_amount/100 << "." << b.amount%100 << " ";
+		std::cout << b.m_comment << std::endl;
+	}
+	std::cout << "The total balance is " << m_balance << std::endl;
+}
