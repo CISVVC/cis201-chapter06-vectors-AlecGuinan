@@ -11,6 +11,12 @@ class Transaction
 	Transaction( int day , int amount, std::string comment);
 
 	void print();
+
+	int day();
+
+	int amount();
+	
+	std::string comment();
 	
 	private:
 	
