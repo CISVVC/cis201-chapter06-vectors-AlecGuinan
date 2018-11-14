@@ -26,5 +26,9 @@ int main()
 	}
 	while ( more );
 	
+	a.averagei();
+	
+	a.print();
+	
 	
 }
