@@ -48,5 +48,5 @@ void Statment::print()
 		std::cout << "The transaction amount is " << b.amount()/100 << "." << b.amount()%100 << " ";
 		std::cout << b.comment() << std::endl;
 	}
-	std::cout << "The total balance is " << m_balance << std::endl;
+	std::cout << "The total balance is " << m_balance/100 << "." << m_balance%100 << std::endl;
 }
