@@ -10,7 +10,7 @@ Purpose: this program tracts transactions and calculates intrest
 #include<string>
 int main()
 {
-	Statement a;
+	Statment a;
 	bool more = true;
 	do 
 	{
@@ -18,10 +18,12 @@ int main()
 		std::string answer;
 		a.addtransaction();
 		std::cout << " Enter more data? (y/n): ";
+		std::cin.clear();
+		std::cin.ignore(9999999999999,'\n');
 		std::cin >> answer;
-		if(answer == "y")
+		if(answer == "n")
 		{
-			more = false
+			more = false;
 		}
 	}
 	while ( more );

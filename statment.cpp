@@ -28,7 +28,7 @@ void Statment::addtransaction()
 int Statment::averagei()
 {
 	int days = 0; 
-	for( int i = 0; i < m_transaction.size(); i++)
+	for( int i = 0; i < m_transactions.size(); i++)
 	{
 		if(days >= 30)
 		{
@@ -40,13 +40,13 @@ int Statment::averagei()
 }
 void Statment::print()
 {
-	for( int i = 0; i < m_transaction.size(); i++)
+	for( int i = 0; i < m_transactions.size(); i++)
 	{
 		Transaction b;
 		b = m_transactions[i];
-		std::cout << "The day is " << b.m_day() << " ";
-		std::cout << "The transaction amount is " << b.m_amount/100 << "." << b.amount%100 << " ";
-		std::cout << b.m_comment << std::endl;
+		std::cout << "The day is " << b.day() << " ";
+		std::cout << "The transaction amount is " << b.amount()/100 << "." << b.amount()%100 << " ";
+		std::cout << b.comment() << std::endl;
 	}
 	std::cout << "The total balance is " << m_balance << std::endl;
 }
