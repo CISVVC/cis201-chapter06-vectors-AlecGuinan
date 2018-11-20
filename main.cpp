@@ -5,12 +5,12 @@ Date Created: 11/13/18
 Purpose: this program tracts transactions and calculates intrest
 */
 #include<iostream>
-#include"statment.h"
+#include"statement.h"
 #include"transaction.h"
 #include<string>
 int main()
 {
-	Statment a;
+	Statement a;
 	bool more = true;
 	do 
 	{
