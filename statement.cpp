@@ -1,14 +1,14 @@
 #include<iostream>
 #include<string>
-#include"statment.h"
+#include"statement.h"
 #include"transaction.h"
 
-Statment::Statment()
+Statement::Statement()
 {
 	m_balance = 0;
 }
 
-void Statment::addtransaction()
+void Statement::addtransaction()
 {
 	std::string comment;
 	int amount;
@@ -25,7 +25,7 @@ void Statment::addtransaction()
 	
 }
 
-int Statment::averagei()
+int Statement::averagei()
 {
 	int days = 0; 
 	for( int i = 0; i < m_transactions.size(); i++)
@@ -38,7 +38,7 @@ int Statment::averagei()
 			days ++;
 	}
 }
-void Statment::print()
+void Statement::print()
 {
 	for( int i = 0; i < m_transactions.size(); i++)
 	{
