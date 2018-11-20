@@ -1,12 +1,12 @@
-#ifndef STATMENT_H
-#define STATMENT_H
+#ifndef STATEMENT_H
+#define STATEMENT_H
 #include<vector>
 #include"transaction.h"
-class Statment
+class Statement
 {
 	public:
 	
-	Statment();
+	Statement();
 	
 	void addtransaction();
 	
