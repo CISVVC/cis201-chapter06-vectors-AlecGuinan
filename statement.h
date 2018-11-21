@@ -18,7 +18,7 @@ class Statement
 
 	std::vector<Transaction> m_transactions;
 
-	int m_balance;
+	std::vector<int>  m_balance;
 
 
 	

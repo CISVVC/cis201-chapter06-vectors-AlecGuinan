@@ -5,7 +5,9 @@
 
 Statement::Statement()
 {
-	m_balance = 0;
+	std::vector<Transaction> m_transactions;
+
+	std::vector<int> m_balance;
 }
 
 void Statement::addtransaction()
